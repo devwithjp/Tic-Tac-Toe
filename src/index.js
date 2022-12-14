@@ -103,6 +103,7 @@ import './index.css'
             <div className="status">{status}</div>
             <ol>{moves}</ol>
           </div>
+          <p>Jp's Game</p>
         </div>
       );
     }
