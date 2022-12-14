@@ -1,6 +1,10 @@
+import Auth from './Auth'
 import React from "react";
 import ReactDOM from 'react-dom/client';
-import './index.css'
+import './index.css';
+import {Amplify} from 'aws-amplify';
+import config from './aws-exports';
+Amplify.configure(config);
 
 
   function Square(props) {
@@ -95,15 +99,18 @@ import './index.css'
         }
       );
       return (
-        <div className="game">
-          <div className="game-board">
-            <Board squares={current} onClickChange={this.onClickChange}/>
+        <>
+          <Auth/>
+          <div className="game">
+            <div className="game-board">
+              <Board squares={current} onClickChange={this.onClickChange}/>
+            </div>
+            <div className="game-info">
+              <div className="status">{status}</div>
+              <ol>{moves}</ol>
+            </div>
           </div>
-          <div className="game-info">
-            <div className="status">{status}</div>
-            <ol>{moves}</ol>
-          </div>
-        </div>
+        </>
       );
     }
   }
