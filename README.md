@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Hoisted on AWS Amplify
+[Tic Tac Toe Game](https://main.da1h86y9tsm4v.amplifyapp.com/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## Available Scripts
 
